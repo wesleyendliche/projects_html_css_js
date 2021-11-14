@@ -52,11 +52,11 @@ p, button {
 }
 
 button {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
     width:10vw;
     height:6vh;
-    border-radius: 30px;
+    border-radius: 50px;
     border-style: hidden;
 }
 
