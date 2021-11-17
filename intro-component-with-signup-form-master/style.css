@@ -94,3 +94,9 @@ a:hover {
     color:hsla(0, 80%, 62%, 0.986);
     text-decoration: underline;
 }
+
+.icon {
+    position: absolute;
+    visibility: hidden;
+    right: 45px;
+}
