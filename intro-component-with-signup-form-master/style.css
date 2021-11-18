@@ -58,7 +58,7 @@ label > input {
     border: 1px solid rgba(224, 214, 214, 0.911);
     text-indent: 15pt;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ label > input {
 }
 
 fieldset > small {
-    font-size:11px;
+    font-size:0.75rem;
     font-family: inherit;
     color: hsl(246, 25%, 77%);
 }
