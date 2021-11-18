@@ -17,4 +17,4 @@ function isBlank() {
     }
 }
 
-submit.addEventListener(onclick, isBlank());
+submit.addEventListener("click", isBlank);
