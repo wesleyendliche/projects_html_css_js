@@ -5,15 +5,16 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const submit = document.querySelector('.claim');
 
-function checkIfBlank() {
-    const fnameValue = fname.value.trim();
-    if (fnameValue === '') {
-        window.alert("Field can't be empty");
-    } else {
-        window.alert("It's OK");
-    };
+function isBlank() {
+    if(fname.value.length == ''){
+        document.getElementById('firstNameError').style.display;
+    } else if (lname.value.length == ''){
+        document.getElementById('lastNameError').style.display;
+    } else if (email.value.length == ''){
+        document.getElementById('emailError').style.display;
+    } else if (password.value.length == ''){
+        document.getElementById('passwordError').style.display;
+    }
 }
 
-submit.addEventListener("click", (e) => {
-    e.preventDefault();
-})
+submit.addEventListener(onclick, isBlank());
