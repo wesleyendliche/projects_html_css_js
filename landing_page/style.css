@@ -34,6 +34,9 @@ a {
     min-height: 100vh;
     overflow: hidden;
     background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -96,4 +99,40 @@ header .container {
 .btn:hover {
     background-color: var(--hoverColor);
     transform: scale(1) !important;
+}
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*fractions of the available space*/
+    align-items: center;
+    justify-content: center;
+}
+
+.big-title {
+    font-size: 1rem;
+    color: var(--darkOne);
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.text {
+    color: var(--lightOne);
+    font-size: 1.1rem;
+    margin: 1.9rem 0 2.5rem;
+    max-width: 600px;
+    line-height: 2.3;
+}
+
+.showcase-area .btn {
+    box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+.person {
+    width: 123%;
+    transform: translate(15% 25px);
+    border-radius: 30px;
+}
+
+.bottom-area {
+    background-color: red;
 }
