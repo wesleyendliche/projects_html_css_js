@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
+
+header {
+    font-family: 'Spectral', serif;
+    font-weight: 700;
+    font-size: 25px;
+    height: 100px;
+    background-color: tomato;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(29, 27, 27);
+}
+
+.logo {
+    width: 120px;
+    padding: 10px;
+}
