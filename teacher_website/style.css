@@ -17,3 +17,20 @@ li a {
     width: 120px;
     padding: 10px;
 }
+
+.about-me {
+    background-color: #ff00ff;
+}
+
+.lesson-types {
+    background-color: #00ff00;
+}
+
+.depo {
+    background-color: #0000ff;
+}
+
+.book-a-class {
+    color: #ffffff;
+    background-color: #000000;
+}
