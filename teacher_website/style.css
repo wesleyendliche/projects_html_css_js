@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 header {
     font-family: 'Spectral', serif;
     font-weight: 700;
@@ -20,6 +24,7 @@ li a {
 
 .about-me {
     background-color: #ff00ff;
+    border: 5px solid #000;
 }
 
 .lesson-types {
