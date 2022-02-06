@@ -1,5 +1,5 @@
 .populares {
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 .populares__conteudo {
@@ -16,9 +16,7 @@
         "card-imagem"
         "card-corpo";
     grid-template-columns: 100%;
-    grid-template-rows: 173px auto;
-    margin-right: 1rem;
-    width: calc(20% - 1rem); /*area da tela dividida em 5 partes, com espaçamento de 1rem à direita*/
+    /*width: calc(20% - 1rem); area da tela dividida em 5 partes, com espaçamento de 1rem à direita*/
 }
 
 .populares__card:last-child { /*colar o ultimo item à margem direita*/
