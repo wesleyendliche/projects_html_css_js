@@ -48,6 +48,7 @@ body {
 
 .panel.active h3 {/*showing the text on the expanded one*/
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) { /*show only 3 cards on small screens*/
