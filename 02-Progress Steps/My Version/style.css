@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18c577;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /*no scrollbars*/
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 600px;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: #cecece;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 7px;
+    width: 0%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: #a7ec4d;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 7px;
+    width: 0%;
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.circles {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #e0e0e0;
+    transition: .3s ease;
+    /*to center the numbers inside the circle:*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circles.active {
+    border-color: #012021;
+}
+
+.btn {
+    background-color: #053a3b;
+    color: #fff;
+    border-color: #012021;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: #e0e0e0;
+    color: #000;
+    cursor: not-allowed;
+}
