@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(1, 29, 66);
+    height: fit-content;
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+
+header h1 {
+    font-family: 'Holtwood One SC', serif;
+    font-size: 3.2em;
+    color: rgb(228, 228, 228);
+    padding-right: 30px;
+    padding-left: 20px;
+}
+
+header img {
+    height: 80px;
+    margin: 20px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.container {
+    background-color: inherit;
+    color: #010100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}   
+
+.form-container {
+    background-color: rgb(1, 29, 66);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+#tarefa {
+    border: 1px solid #010100;
+    border-radius: 5px;
+    padding: 18px;
+    font-size: 1.2em;
+    width: 70%;
+}
+
+#submit {
+    background-color: rgb(124, 124, 124);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+    margin-left: 5px;
+    color: rgb(228, 228, 228);
+}
+
+ul {
+    display: inline;
+}
+
+ul li {
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    background-color: rgb(124, 124, 124);
+    padding-left: 10px;
+}
+
+ul li:nth-child(odd) { 
+    background: rgb(255, 251, 251); 
+}
+
+ul li:nth-child(1) {
+    border-radius: 5px 5px 0 0;
+}
+

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:wght@400;700&display=swap');
+
+:root {
+    --corPrincipalCirculos:#b3b3b3;
+    --corSecundariaCirculos: #1a3452;
+    --corPrincipalBotao: #807e7e;
+    --corSecundariaBotao: #368644;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #5182bb;
+}
+
+.container {
+    text-align: center;
+}
+
+.container-progressao {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 500px;
+}
+
+.container-progressao::before {
+    content: '';
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+}
+
+.progresso {
+    background-color: var(--corSecundariaCirculos);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    transform: translateY(50%);
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circulo {
+    background-color: var(--corPrincipalCirculos);
+    color: #000;
+    font-weight: 900;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--corPrincipalCirculos);
+    transition: .5s ease;
+}
+
+.circulo.ativo {
+    border-color: var(--corSecundariaCirculos);
+}
+
+.botao {
+    background-color: var(--corSecundariaBotao);
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px;
+    margin: 5px;
+    width: 100px;
+}
+
+.botao:active {
+    transform: scale(0.9);
+}
+
+.botao:focus {
+    outline: 0;
+}
+
+.botao:disabled {
+    cursor: not-allowed;
+    background-color: var(--corPrincipalBotao);
+}

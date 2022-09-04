@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Vidaloka&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;  
+}
+
+.panel {
+    background-size: auto 100%; /*fit container auto 100%*/
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    height: 90vh;
+    width: 200px;
+    cursor: pointer;
+    flex: 0.5; /*needs this so the other can expand*/
+    padding: 20px;
+    margin: 15px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+
+.panel h3 {
+    font-family: 'Vidaloka', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgb(14, 83, 110);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {/*showing the text on the expanded one*/
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(14, 83, 110);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+.panel.active p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(14, 83, 110);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    margin-right: 10px;
+    opacity: 1;
+}
+
+@media (max-width: 480px) { /*show only 3 cards on small screens*/
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), 
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
