@@ -19,3 +19,12 @@ console.log(adultYears)
 
 adultYears = calculateAdultYears(age);
 console.log(adultYears);
+
+let person = {
+    name: 'Wes', //property
+    greet() { //method
+        console.log('Hello!');
+    }
+};
+
+person.greet();
