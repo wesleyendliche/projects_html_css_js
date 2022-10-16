@@ -1,7 +1,10 @@
-// document.body.children[1].children[0].href = 'https://google.com';
+let paragraphElement = document.querySelector('p');
 
-let anchorElement = document.getElementById('external-link');
-anchorElement.href = "https://google.com";
+function changeParagraphText() {
+    paragraphElement.textContent = 'Clicked!';
+    console.log('Paragraph clicked!');
+}
 
-anchorElement = document.querySelector('p a');
-anchorElement.href = 'https://academind.com';
+paragraphElement.addEventListener('click', changeParagraphText);
+//we don't add () to the function name here because we don't want to call the action automatically
+//Instead, we wait for the user to call the action.
