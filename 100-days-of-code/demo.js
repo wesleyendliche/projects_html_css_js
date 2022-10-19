@@ -1,13 +1,13 @@
-let inputField = document.getElementById('product-name');
-let remainingCharacters = document.getElementById('remaining-chars');
+const inputField = document.getElementById('product-name');
+const remainingCharacters = document.getElementById('remaining-chars');
 
-let maxAllowedChars = inputField.maxLength;
+const maxAllowedChars = inputField.maxLength;
 
 function updateRemainingCharacters(event) {
-    let enteredText = event.target.value;
-    let enteredTextLength = enteredText.length;
+    const enteredText = event.target.value;
+    const enteredTextLength = enteredText.length;
 
-    let remainingChars = maxAllowedChars - enteredTextLength;
+    const remainingChars = maxAllowedChars - enteredTextLength;
 
     remainingCharacters.textContent = remainingChars;
 }
