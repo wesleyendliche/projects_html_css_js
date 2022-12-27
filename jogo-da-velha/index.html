@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo Da Velha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Jogo da Velha</h1>
       <p>Feito com HTML, CSS e Vanilla JS!</p>
     </header>
@@ -20,8 +27,8 @@
             <input type="text" id="nome-player" name="nome-player" />
           </div>
           <div>
-            <button type="button">Cancelar</button>
-            <button type="submit">Confirmar</button>
+            <button type="button" class="btn btn-alt">Cancelar</button>
+            <button type="submit" class="btn">Confirmar</button>
           </div>
         </form>
       </aside>
@@ -33,7 +40,7 @@
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
               <p>X</p>
-              <button>Editar</button>
+              <button class="btn btn-alt">Editar</button>
             </article>
           </li>
           <li>
@@ -41,11 +48,11 @@
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
               <p>X</p>
-              <button>Editar</button>
+              <button class="btn btn-alt">Editar</button>
             </article>
           </li>
         </ol>
-        <button>Comece o Jogo</button>
+        <button class="btn">Comece o Jogo</button>
       </section>
 
       <section id="game-ativo">
