@@ -12,17 +12,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/overlays.css">
+    <link rel="stylesheet" href="styles/config.css">
+    <link rel="stylesheet" href="styles/game.css">
   </head>
   <body>
+    <div id="sombra"></div>
     <header id="main-header">
       <h1>Jogo da Velha</h1>
       <p>Feito com HTML, CSS e Vanilla JS!</p>
     </header>
     <main>
-      <aside>
+      <aside class="modal" id="config-overlay">
         <h2>Coloque seu nome</h2>
         <form>
-          <div>
+          <div class="form-controle">
             <label for="nome-player">Digite seu nome:</label>
             <input type="text" id="nome-player" name="nome-player" />
           </div>
@@ -39,7 +43,7 @@
             <article>
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
-              <p>X</p>
+              <p class="simbolo-player">X</p>
               <button class="btn btn-alt">Editar</button>
             </article>
           </li>
@@ -47,7 +51,7 @@
             <article>
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
-              <p>X</p>
+              <p class="simbolo-player">O</p>
               <button class="btn btn-alt">Editar</button>
             </article>
           </li>
@@ -56,23 +60,23 @@
       </section>
 
       <section id="game-ativo">
-        <article>
-          <h3>Você ganhou, <span>Nome do Jogador</span>!</h3>
+        <article id="game-over">
+          <h2>Você ganhou, <span>Nome do Jogador</span>!</h2>
           <p>Clique em "Comece o Jogo" para reiniciar!</p>
         </article>
 
-        <p>É a sua vez <span>Nome do Jogador</span>!</p>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-
-          <li></li>
+        <p>É a sua vez <span id="player-ativo">Nome do Jogador</span>!</p>
+        <ol id="game-board">
+          <li class="clicado">X</li>
           <li></li>
           <li></li>
 
           <li></li>
+          <li class="clicado">O</li>
           <li></li>
+
+          <li></li>
+          <li class="clicado">X</li>
           <li></li>
         </ol>
       </section>
