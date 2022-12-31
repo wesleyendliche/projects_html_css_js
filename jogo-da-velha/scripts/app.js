@@ -1,6 +1,9 @@
+let playerEditado = 0;
+
 const overlay = document.getElementById('config-overlay');
 const elementoSombra = document.getElementById('sombra');
 const formulario = document.querySelector('form');
+const outputErro = document.getElementById('msg-de-erro');
 
 /*Botões*/
 const editarPlayer1 = document.getElementById('btn-editar-player1');

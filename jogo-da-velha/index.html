@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/overlays.css">
-    <link rel="stylesheet" href="styles/config.css">
-    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/overlays.css" />
+    <link rel="stylesheet" href="styles/config.css" />
+    <link rel="stylesheet" href="styles/game.css" />
     <script src="scripts/config.js" defer></script>
     <script src="scripts/game.js" defer></script>
     <script src="scripts/app.js" defer></script>
@@ -31,10 +31,13 @@
         <form>
           <div class="form-controle">
             <label for="nome-player">Digite seu nome:</label>
-            <input type="text" id="nome-player" name="nome-player" />
+            <input type="text" id="nome-player" name="nome-player" required />
           </div>
+          <p id="msg-de-erro"></p>
           <div>
-            <button type="button" class="btn btn-alt" id="cancelar-config">Cancelar</button>
+            <button type="reset" class="btn btn-alt" id="cancelar-config">
+              Cancelar
+            </button>
             <button type="submit" class="btn">Confirmar</button>
           </div>
         </form>
@@ -43,19 +46,31 @@
       <section id="configuracao">
         <ol>
           <li>
-            <article>
+            <article id="player-1-data">
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
               <p class="simbolo-player">X</p>
-              <button class="btn btn-alt" id="btn-editar-player1">Editar</button>
+              <button
+                class="btn btn-alt"
+                id="btn-editar-player1"
+                data-idplayer="1"
+              >
+                Editar
+              </button>
             </article>
           </li>
           <li>
-            <article>
+            <article id="player-2-data">
               <h2>Jogador 1</h2>
               <h3>Nome do Jogador</h3>
               <p class="simbolo-player">O</p>
-              <button class="btn btn-alt" id="btn-editar-player2">Editar</button>
+              <button
+                class="btn btn-alt"
+                id="btn-editar-player2"
+                data-idplayer="2"
+              >
+                Editar
+              </button>
             </article>
           </li>
         </ol>

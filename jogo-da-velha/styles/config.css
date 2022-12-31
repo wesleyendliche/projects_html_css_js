@@ -23,6 +23,16 @@
     padding: 0.4rem;
 }
 
+.erro label {
+    color: rgb(136, 2, 2);
+}
+
+.erro input {
+    border-color: rgb(136, 2, 2);
+    color: rgb(136, 2, 2);
+    background-color: rgb(253, 219, 219);
+}
+
 #configuracao {
     width: 90%;
     max-width: 40rem;
