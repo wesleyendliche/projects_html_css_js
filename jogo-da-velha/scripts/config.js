@@ -9,6 +9,7 @@ function fechaConfiguracao() {
     elementoSombra.style.display = 'none';
     formulario.firstElementChild.classList.remove('erro');
     outputErro.textContent = '';
+    formulario.firstElementChild.lastElementChild.value = ''; //limpa o input de nomes
 }
 
 function savePlayerConfig(event) { 
@@ -22,5 +23,10 @@ function savePlayerConfig(event) {
         return;
     }
 
-    const playerInserido = document.getElementById('player' + )
+    const playerInserido = document.getElementById('player-' + playerEditado + '-data');
+    playerInserido.children[1].textContent = nomeDoPlayer; //h3 do article
+
+    players[playerEditado - 1].name = playerInserido; //-1 p/ acessar o index correto do array
+
+    fechaConfiguracao();
 }

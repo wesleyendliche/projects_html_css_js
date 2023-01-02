@@ -1,5 +1,16 @@
 let playerEditado = 0;
 
+const players = [
+    {
+        name: '',
+        symbol: 'X'
+    },
+    {
+        name: '',
+        symbol: 'O'
+    },
+];
+
 const overlay = document.getElementById('config-overlay');
 const elementoSombra = document.getElementById('sombra');
 const formulario = document.querySelector('form');
