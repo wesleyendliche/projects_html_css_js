@@ -1,3 +1,9 @@
+const gameData = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+];
+
 let playerEditado = 0;
 let playerAtivo = 0;
 
@@ -18,7 +24,7 @@ const formulario = document.querySelector('form');
 const outputErro = document.getElementById('msg-de-erro');
 const gameArea = document.getElementById('game-ativo');
 const quadradosDoJogo = document.querySelectorAll('#game-board li');
-const playerAtivoSpan = document.getElementById('player-ativo');
+const playerAtivoSpan = document.querySelector('#player-ativo');
 
 /*Botões*/
 const editarPlayer1 = document.getElementById('btn-editar-player1');
