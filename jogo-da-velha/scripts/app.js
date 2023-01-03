@@ -6,6 +6,7 @@ const gameData = [
 
 let playerEditado = 0;
 let playerAtivo = 0;
+let rodadaAtual = 1;
 
 const players = [
     {
