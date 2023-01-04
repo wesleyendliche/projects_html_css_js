@@ -4,18 +4,23 @@ function abreJogo() {
         return;
     }
     console.log(players);
-    playerAtivoSpan.textContent = players[playerAtivo].name;
+    playerAtivoSpan.textContent = playerOneName.innerHTML;
     gameArea.style.display = 'block';
 }
 
 function trocaPlayer() {
-    if (playerAtivo === 0) {
-        playerAtivo = 1;
-    } else {
-        playerAtivo = 0;
-    }
+  if (playerAtivo === 0) {
+      playerAtivo = 1;
+  } else {
+      playerAtivo = 0;
+  }
 
-    playerAtivoSpan.textContent = players[playerAtivo].name;
+  if(playerAtivo === 1) {
+    playerAtivoSpan.textContent = playerTwoName.innerHTML
+  } else {
+    playerAtivoSpan.textContent = playerOneName.innerHTML
+  }
+
 }
 
 function selecionaQuadrado(event) {

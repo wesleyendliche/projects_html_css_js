@@ -26,6 +26,8 @@ const outputErro = document.getElementById('msg-de-erro');
 const gameArea = document.getElementById('game-ativo');
 const quadradosDoJogo = document.querySelectorAll('#game-board li');
 const playerAtivoSpan = document.querySelector('#player-ativo');
+const playerOneName = document.getElementById('player-one-name');
+const playerTwoName = document.getElementById('player-two-name');
 
 /*Botões*/
 const editarPlayer1 = document.getElementById('btn-editar-player1');
