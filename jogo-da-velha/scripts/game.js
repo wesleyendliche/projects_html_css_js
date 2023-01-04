@@ -1,9 +1,28 @@
+function resetaGame() {
+  playerAtivo = 0;
+  rodadaAtual = 1;
+  gameIsOver = false;
+  gameOver.style.display = 'none';
+
+  let quadradosIndex = 0;
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      gameData[i][j] = 0;
+      quadradosDoJogo[quadradosIndex].textContent = '';
+      quadradosDoJogo[quadradosIndex].classList.remove('clicado');
+      quadradosIndex++;
+    }
+  }
+}
+
 function abreJogo() {
     if (players[0].name === '' || players[1].name === '') {
         alert('Por favor, digite os nomes dos players!');
         return;
     }
-    console.log(players);
+
+    resetaGame();
+    
     playerAtivoSpan.textContent = playerOneName.innerHTML;
     gameArea.style.display = 'block';
 }
@@ -24,6 +43,10 @@ function trocaPlayer() {
 }
 
 function selecionaQuadrado(event) {
+    if (gameIsOver) {
+      return;
+    }
+
     const quadradoClicado = event.target;
     const colunaSelecionada = quadradoClicado.dataset.col - 1;
     const linhaSelecionada = quadradoClicado.dataset.row - 1;
@@ -39,7 +62,10 @@ function selecionaQuadrado(event) {
     gameData[linhaSelecionada][colunaSelecionada] = playerAtivo + 1;
     
     const idVencedor = checaGameOver();
-    console.log(idVencedor);
+    
+    if (idVencedor !== 0) {
+      finalizaJogo(idVencedor);
+    }
 
     rodadaAtual++; //muda a rodada
     trocaPlayer();
@@ -91,4 +117,17 @@ function checaGameOver() {
   }
 
   return 0; //sinalizar que não tem vencedor ainda
+}
+
+function finalizaJogo(idVencedor) {
+  gameIsOver = true;
+  gameOver.style.display = 'block';
+
+  if (idVencedor === 1) {
+    playerVencedorSpan.textContent = playerOneName.innerHTML;
+  } else if (idVencedor === 2) {
+    playerVencedorSpan.textContent = playerTwoName.innerHTML;
+  } else {
+    gameOver.firstElementChild.textContent = 'Empatou!';
+  } 
 }

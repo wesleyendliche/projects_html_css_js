@@ -7,6 +7,7 @@ const gameData = [
 let playerEditado = 0;
 let playerAtivo = 0;
 let rodadaAtual = 1;
+let gameIsOver = false;
 
 const players = [
     {
@@ -28,6 +29,8 @@ const quadradosDoJogo = document.querySelectorAll('#game-board li');
 const playerAtivoSpan = document.querySelector('#player-ativo');
 const playerOneName = document.getElementById('player-one-name');
 const playerTwoName = document.getElementById('player-two-name');
+const gameOver = document.getElementById('game-over');
+const playerVencedorSpan = document.getElementById('player-vencedor');
 
 /*Botões*/
 const editarPlayer1 = document.getElementById('btn-editar-player1');
