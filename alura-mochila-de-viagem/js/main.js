@@ -1,49 +1,62 @@
-const form = document.getElementById("novo-item");
-const lista = document.getElementById("lista");
-const itens = JSON.parse(localStorage.getItem("itens")) || []; //se tem itens, consulta; se não, cria um array vazio
+const form = document.getElementById("novoItem")
+const lista = document.getElementById("lista")
+const itens = JSON.parse(localStorage.getItem("itens")) || []
 
 itens.forEach( (elemento) => {
-  criaElemento(elemento);
-} );
+    criaElemento(elemento)
+} )
 
 form.addEventListener("submit", (evento) => {
-  evento.preventDefault();
+    evento.preventDefault()
 
-  const nome = evento.target.elements["nome"];
-  const quantidade = evento.target.elements["quantidade"];
+    const nome = evento.target.elements['nome']
+    const quantidade = evento.target.elements['quantidade']
 
-  const itemAtual = {
-    "nome": nome.value,
-    "quantidade": quantidade.value
-  };
 
-  criaElemento(itemAtual);
+//  Const para conferir elemento nome no array itens 
+    const existe = itens.find( elemento => elemento.nome === nome.value ) 
 
-  itens.push(itemAtual);
+    const itemAtual = {
+        "nome": nome.value,
+        "quantidade": quantidade.value
+    }
 
-  localStorage.setItem("itens", JSON.stringify(itens)); //(chave, valor)
 
-  criaElemento(
-    nome.value,
-    quantidade.value
-  );
+// Condicional para conferir se o elemento 
+    if (existe) {
+        itemAtual.id = existe.id
 
-  nome.value = '';
-  quantidade.value = '';
+        atualizaElemento(itemAtual)
 
-});
+        itens[existe.id] = itemAtual
+    } else {
+       itemAtual.id = itens.length
+
+        criaElemento(itemAtual)
+
+        itens.push(itemAtual)
+    }
+
+    localStorage.setItem("itens", JSON.stringify(itens))
+
+    nome.value = ""
+    quantidade.value = ""
+})
 
 function criaElemento(item) {
-  const novoItem = document.createElement("li");
-  novoItem.classList.add("item");
+    const novoItem = document.createElement("li")
+    novoItem.classList.add("item")
 
-  const numeroItem = document.createElement("strong");
-  numeroItem.innerHTML = item.quantidade;
+    const numeroItem = document.createElement("strong")
+    numeroItem.innerHTML = item.quantidade
+    numeroItem.dataset.id = item.id
+    novoItem.appendChild(numeroItem)
 
-  novoItem.appendChild(numeroItem);
-  novoItem.innerHTML += item.nome;
+    novoItem.innerHTML += item.nome
 
-  lista.appendChild(novoItem);
+    lista.appendChild(novoItem)
 }
 
-//trying on git commands
+function atualizaElemento(item) {
+    document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
+}
